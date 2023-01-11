@@ -1,0 +1,29 @@
+int main(int argc, char const *argv[])
+{
+   wiringPiSetupGpio();
+   PWMInit();
+
+// Forward Movement at 75% speed
+   moveForward(75);
+   delay(2000);
+   stopMoveForward();
+
+// Backward Movement at 50% speed
+   delay(1000);
+   moveBackward(50);
+   delay(2000);
+   stopMoveBackward();
+
+// Pivot Left Movement at 55% speed
+   delay(1000);
+   pivotLeft(55);
+   delay(2000);
+   stopPivotLeft();
+
+// Pivot Right Movement at 15% speed
+   delay(1000);
+   pivotRight(15);
+   delay(2000);
+   stopPivotRight();
+
+}

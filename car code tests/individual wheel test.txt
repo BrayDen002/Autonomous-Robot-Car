@@ -1,0 +1,54 @@
+int main(int argc, char const *argv[])
+{
+   wiringPiSetupGpio();
+   PWMInit();
+
+// LEFT SIDE at 50% speed
+   // CW
+     frontLeft(1, 50);
+     delay(1000);
+     stopFrontLeft(1);
+
+     delay(500);
+   // CCW
+     frontLeft(0, 50);
+     delay(1000);
+     stopFrontLeft(0);
+
+     delay(500);
+   // CW
+     rearLeft(1, 50);
+     delay(1000);
+     stopRearLeft(1);
+
+     delay(500);
+   // CCW
+     rearLeft(0, 50);
+     delay(1000);
+     stopRearLeft(0);
+
+// RIGHT SIDE at 25% speed
+     delay(500);
+   // CW
+     frontRight(1, 25);
+     delay(1000);
+     stopFrontRight(1);
+
+     delay(500);
+   // CCW
+     frontRight(0, 25);
+     delay(1000);
+     stopFrontRight(0);
+
+     delay(500);
+   // CW
+     rearRight(1, 25);
+     delay(1000);
+     stopRearRight(1);
+
+     delay(500);
+   // CCW
+     rearRight(0, 25);
+     delay(1000);
+     stopRearRight(0);
+}

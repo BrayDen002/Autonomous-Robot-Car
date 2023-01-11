@@ -1,0 +1,29 @@
+Note: Doesnt include positive and negative pins
+
+Motor INIT:
+pwmInit pins: 1, 12, 17, 25,
+
+MOTORS:
+front left motor pins: 27, 22
+
+front right motor pins: 24, 23
+
+rear left motor pins: 9, 11
+
+rear right motor pins: 8, 7
+
+ECHO:
+front echo pins: trig 24 echo 23
+
+left echo pins: trig 17 echo 27
+
+LINE SENSOR: 
+left line pins: 10
+
+right line pins: 22
+
+
+Used pins: 1, 2, 3, 7, 8, 9, 11, 12, 14, 15, 17, 20,
+           21, 22, 23, 24, 25, 27
+
+free pins: 5, 6, 10, 13, 16, 18, 19, 26,  

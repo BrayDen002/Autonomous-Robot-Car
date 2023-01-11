@@ -1,0 +1,55 @@
+int main(int argc, char const *argv[])
+{
+   wiringPiSetupGpio();
+   PWMInit();
+
+  // ################# beginning of line sensor code ########################
+           int x = piThreadCreate(myThread);
+
+
+           if (x != 0) {
+               printf("it didn't start\n");
+           }
+
+           printf("Calibrating... \n");
+
+           if(lineOutput1 == 0){
+               printf("...\n");
+           }
+           delay(500*4);
+
+           if(lineOutput2 == 0){
+               printf("...\n ");
+           }
+           delay(500*4);
+           printf("Calibrating done\n");
+
+
+           for(;;){
+
+               if(lineOutput1 == 0){
+                   printf("On the line and, ");
+                   moveForward();
+
+               }else{
+                   printf("OFF THE LINE and, ");
+                   stopMoveForward();
+
+               }
+               delay(500);
+
+               if(lineOutput2 == 0){
+                   printf("On the line and, ");
+                   moveForward();
+
+               }else{
+                   printf("OFF THE LINE and, ");
+                   stopMoveForward();
+
+               }
+               delay(500);
+
+           }
+  // #####################################################################
+
+}
